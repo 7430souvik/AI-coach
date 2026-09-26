@@ -18,12 +18,12 @@ METRICS_FIELDS = {
         "back_angle": 0,
         "depth_status": "N/A",
     },
-    "Push-ups": {
+    "push-ups": {
         "elbow_angle": 0,
         "body_alignment": "N/A",
         "hip_status": "N/A",
     },
-    "Biceps Curls (Dumbbell)": {
+    "Bicep Curls (Dumbbell)": {
         "elbow_angle": 0,
         "shoulder_status": "N/A",
         "swing_status": "N/A",
