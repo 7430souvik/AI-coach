@@ -3,10 +3,7 @@ import os
 import streamlit as st
 from pathlib import Path
 
-if os.getenv("STREAMLIT_SERVER_HEADLESS"):
-    _DB_PATH = "/tmp/gym_coach.db"
-else:
-    _DB_PATH = str(Path(__file__).parent.parent.parent / "data.db")
+_DB_PATH = "/tmp/data.db"
 
 @st.cache_resource
 def _get_connection():
