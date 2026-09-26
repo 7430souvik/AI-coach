@@ -1,0 +1,14 @@
+[project]
+name = "gym-coach"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dotenv>=0.9.9",
+    "groq>=1.7.0",
+    "gtts>=2.5.4",
+    "mediapipe>=0.10.20",
+    "streamlit>=1.64.0",
+    "streamlit-webrtc>=0.78.1",
+]
