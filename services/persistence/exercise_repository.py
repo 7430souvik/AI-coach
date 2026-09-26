@@ -7,8 +7,24 @@ _DB_PATH = "/tmp/data.db"
 
 @st.cache_resource
 def _get_connection():
+    print("========== DATABASE DEBUG ==========")
+    print("DB PATH:", _DB_PATH)
+    print("TMP EXISTS:", os.path.exists("/tmp"))
+    print("TMP WRITABLE:", os.access("/tmp", os.W_OK))
+    print("DB EXISTS:", os.path.exists(_DB_PATH))
+
+    if os.path.exists(_DB_PATH):
+        print("DB WRITABLE:", os.access(_DB_PATH, os.W_OK))
+        print("DB MODE:", oct(os.stat(_DB_PATH).st_mode))
+
+
     conn = sqlite3.connect(_DB_PATH, check_same_thread=False)
     conn.row_factory= sqlite3.Row
+
+    print("SQLITE CONNECTION CREATED")
+    print("===================================")
+
+    
     return conn
 
 
