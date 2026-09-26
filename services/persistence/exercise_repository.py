@@ -1,9 +1,12 @@
 import sqlite3
-
+import os
 import streamlit as st
 from pathlib import Path
 
-_DB_PATH = str(Path(__file__).parent.parent.parent / "data.db")
+if os.getenv("STREAMLIT_SERVER_HEADLESS"):
+    _DB_PATH = "/tmp/gym_coach.db"
+else:
+    _DB_PATH = str(Path(__file__).parent.parent.parent / "data.db")
 
 @st.cache_resource
 def _get_connection():
